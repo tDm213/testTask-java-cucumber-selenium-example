@@ -33,6 +33,8 @@ public class _Hook {
     public void TearDownTest(Scenario scenario) {
         if (scenario.isFailed()) {
             System.out.println("TakesScreenshot");
+
+            // take screenshot of all page
             scenario.embed(((TakesScreenshot)BrowserChrome.webDriver).getScreenshotAs(OutputType.BYTES), "image/png");
             JavascriptExecutor jsx = (JavascriptExecutor)BrowserChrome.webDriver;
             jsx.executeScript("window.scrollBy(0,450)", "");

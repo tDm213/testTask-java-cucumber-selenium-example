@@ -2,6 +2,8 @@ package Base;
 
 import org.openqa.selenium.*;
 
+import java.util.concurrent.TimeUnit;
+
 public class BrowserChrome {
 
     public static WebDriver webDriver;
@@ -10,4 +12,65 @@ public class BrowserChrome {
     {
         webDriver.navigate().to(ConfigMain.URLWWW + urlAddition);
     }
+
+//    // Check if element displayed and Visible on Page
+//    public static boolean IsElementVisible(By el)
+//    {
+//        try
+//        {
+//            return webDriver.findElement(el).isDisplayed() && webDriver.findElement(el).isEnabled();
+//        }
+//        catch (NoSuchElementException e)
+//        {
+//            return false;
+//        }
+//    }
+
+    // Explicit Wait
+    public static boolean WaitUntilElementIsDisplayed(By element, int timeoutInSeconds)
+    {
+        int i;
+        for (i = 0; i < timeoutInSeconds; i++)
+        {
+            if (ElementIsDisplayed(element))
+            {
+                return true;
+            }
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
+
+    // Implicit  Wait
+    public static boolean WaitSeconds (int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+    // Check if element displayed and Visible on Page
+    public static boolean ElementIsDisplayed(By element)
+    {
+        boolean present = false;
+        webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        try
+        {
+            //present = webDriver.findElement(element).Any(el => el.Displayed) | _webDriver.FindElement(element).Displayed;
+            present = webDriver.findElement(element).isDisplayed() && webDriver.findElement(element).isEnabled();
+        }
+        catch (NoSuchElementException e)
+        {
+        }
+        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        return present;
+    }
+
+
 }
