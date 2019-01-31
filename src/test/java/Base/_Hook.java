@@ -52,5 +52,9 @@ public class _Hook {
             }
             System.out.println("======================================================================================================================================");
         }
+
+        System.out.println("Closing the browser Chrome");
+        BrowserChrome.webDriver.close();
+        BrowserChrome.webDriver.quit();
     }
 }
