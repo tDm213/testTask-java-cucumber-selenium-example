@@ -1,6 +1,5 @@
 package Steps;
 
-import Base.BrowserChrome;
 import Pages.Pages_TB;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;

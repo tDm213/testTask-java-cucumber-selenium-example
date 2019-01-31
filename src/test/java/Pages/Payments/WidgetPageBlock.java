@@ -1,21 +1,21 @@
-package Pages.HomePage;
+package Pages.Payments;
 
 import Base.BrowserChrome;
 import Elements.Elements_TB;
-import Elements.HomePage.elBody;
+import Elements.Payments.elWidgetPageBlock;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 
 import static Base.ConfigMain.PAGE_LOAD_TIMEOUT;
 
-public class Body {
+public class WidgetPageBlock {
 
     // Click payments from footer
-    public void Click_Payments ()
+    public void Click_KommunalniePlatezhi ()
     {
-        System.out.println("Footer, Click_Payments");
+        System.out.println("Footer, Click_KommunalniePlatezhi");
 
-        By element = Elements_TB._HomePage()._elBody().Find(elBody.Element.Payments);
+        By element = Elements_TB._Payments()._elWidgetPageBlock().Find(elWidgetPageBlock.Element.Housing);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {
@@ -23,7 +23,7 @@ public class Body {
                 BrowserChrome.webDriver.findElement(element).click();
             }
         } catch (NoSuchElementException e) {
-            System.out.println("Can't find: Footer, Click_Payments");
+            System.out.println("Can't find: Footer, Click_KommunalniePlatezhi");
         }
     }
 }
