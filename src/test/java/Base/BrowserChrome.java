@@ -29,6 +29,9 @@ public class BrowserChrome {
     // Explicit Wait
     public static boolean WaitUntilElementIsDisplayed(By element, int timeoutInSeconds)
     {
+        // Always Wait one second
+        WaitSeconds(1);
+
         int i;
         for (i = 0; i < timeoutInSeconds; i++)
         {

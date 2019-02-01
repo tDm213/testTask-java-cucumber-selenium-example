@@ -6,12 +6,12 @@ public class elBody {
 
     public enum Element
     {
-        Payments
+        elPayments
     }
 
     public By Find(Element element)
     {
-        if (element == Element.Payments)
+        if (element == Element.elPayments)
         {
             return By.xpath(".//*[@data-qa-file='Footer']//*[@aria-label='Платежи']");
         }

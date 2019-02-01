@@ -15,7 +15,7 @@ public class Body {
     {
         System.out.println("Footer, Click_Payments");
 
-        By element = Elements_TB._HomePage()._elBody().Find(elBody.Element.Payments);
+        By element = Elements_TB._HomePage()._elBody().Find(elBody.Element.elPayments);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {

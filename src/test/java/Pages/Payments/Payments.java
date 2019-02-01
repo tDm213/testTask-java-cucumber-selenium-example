@@ -12,9 +12,7 @@ public class Payments {
         return page;
     }
 
-    public WidgetPageBlock _WidgetPageBlock() {
-        return getPage(WidgetPageBlock::new);
-    }
-    public PaymentsCategoriesHousing _PaymentsCategoriesHousing() {return getPage(PaymentsCategoriesHousing::new);
-    }
+    public WidgetPageBlock _WidgetPageBlock() {return getPage(WidgetPageBlock::new);}
+    public PaymentsCategoriesHousing _PaymentsCategoriesHousing() {return getPage(PaymentsCategoriesHousing::new);}
+    public PaymentBlock _PaymentBlock() {return getPage(PaymentBlock::new);}
 }

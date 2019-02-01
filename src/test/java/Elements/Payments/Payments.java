@@ -17,4 +17,5 @@ public class Payments {
         return getPage(elWidgetPageBlock::new);
     }
     public elPaymentsCategoriesHousing _elPaymentsCategoriesHousing() {return getPage(elPaymentsCategoriesHousing::new);}
+    public elPaymentBlock _elPaymentBlock() {return getPage(elPaymentBlock::new);}
 }
