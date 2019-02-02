@@ -8,7 +8,8 @@ public class elWidgetPageBlock {
     public enum Element
     {
         elKommunalniePlatezhi,
-        elFirstService
+        elFirstService,
+        elInput_PaymentService
     }
 
     public By Find(Element element)
@@ -25,6 +26,10 @@ public class elWidgetPageBlock {
                 txt = "ЖКУ-Москва";
             }
             return By.xpath("(//*[@data-qa-file='GridColumn'])[1]//*[contains(text(),'"+ txt +"')]");
+        }
+        else if (element == Element.elInput_PaymentService)
+        {
+            return By.xpath("(//*[@data-qa-file='StatelessInput']//*[@data-qa-file='SearchInput'])[1]");
         }
 
         return By.xpath("");

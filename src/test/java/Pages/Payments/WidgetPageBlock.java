@@ -2,7 +2,6 @@ package Pages.Payments;
 
 import Base.BrowserChrome;
 import Elements.Elements_TB;
-import Elements.Payments.elPaymentBlock;
 import Elements.Payments.elWidgetPageBlock;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -63,7 +62,7 @@ public class WidgetPageBlock {
             txt = "ЖКУ-Москва";
         }
 
-        By element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elInput_PaymentService);
+        By element = Elements_TB._Payments()._elWidgetPageBlock().Find(elWidgetPageBlock.Element.elInput_PaymentService);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {

@@ -1,4 +1,4 @@
-package Elements.Payments;
+package Elements.Payments.KommunalniePlatezhi;
 
 import org.openqa.selenium.By;
 

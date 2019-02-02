@@ -2,7 +2,7 @@ package Pages.Payments.KommunalniePlatezhi.GKU_Moscow;
 
 import Base.BrowserChrome;
 import Elements.Elements_TB;
-import Elements.Payments.elPaymentBlock;
+import Elements.Payments.KommunalniePlatezhi.GKU_Moscow.elPaymentBlock;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 
@@ -14,7 +14,8 @@ public class PaymentBlock {
     {
         System.out.println("Click_PaymentTab");
 
-        By element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elPaymentTab);
+        By element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()
+                ._elPaymentBlock().Find(elPaymentBlock.Element.elPaymentTab);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {
@@ -30,7 +31,8 @@ public class PaymentBlock {
     {
         System.out.println("Click_PayButton");
 
-        By element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elPayButton);
+        By element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()
+                ._elPaymentBlock().Find(elPaymentBlock.Element.elPayButton);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {
@@ -46,7 +48,8 @@ public class PaymentBlock {
     {
         System.out.println("Input_ProviderPayerCode");
 
-        By element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elInput_ProviderPayerCode);
+        By element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
+                .Find(elPaymentBlock.Element.elInput_ProviderPayerCode);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {
@@ -64,7 +67,8 @@ public class PaymentBlock {
     {
         System.out.println("Input_ProviderPeriod");
 
-        By element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elInput_ProviderPeriod);
+        By element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
+                .Find(elPaymentBlock.Element.elInput_ProviderPeriod);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {
@@ -81,7 +85,8 @@ public class PaymentBlock {
     {
         System.out.println("Input_PaymentSum");
 
-        By element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elInput_PaymentSum);
+        By element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
+                .Find(elPaymentBlock.Element.elInput_PaymentSum);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {
@@ -101,11 +106,13 @@ public class PaymentBlock {
 
         if (errorType.equals("EmptyError"))
         {
-            element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elProviderPayerCode_EmptyError);
+            element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
+                    .Find(elPaymentBlock.Element.elProviderPayerCode_EmptyError);
         }
         else if (errorType.equals("WrongInput"))
         {
-            element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elProviderPayerCode_WrongInput);
+            element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
+                    .Find(elPaymentBlock.Element.elProviderPayerCode_WrongInput);
         }
 
         return BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
@@ -117,11 +124,13 @@ public class PaymentBlock {
 
         if (errorType.equals("EmptyError"))
         {
-            element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elProviderPeriod_EmptyError);
+            element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
+                    .Find(elPaymentBlock.Element.elProviderPeriod_EmptyError);
         }
         else if (errorType.equals("WrongInput"))
         {
-            element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elProviderPeriod_WrongInput);
+            element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
+                    .Find(elPaymentBlock.Element.elProviderPeriod_WrongInput);
         }
 
         return BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
@@ -133,15 +142,18 @@ public class PaymentBlock {
 
         if (errorType.equals("EmptyError"))
         {
-            element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elPaymentSum_EmptyError);
+            element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
+                    .Find(elPaymentBlock.Element.elPaymentSum_EmptyError);
         }
         else if (errorType.equals("WrongInput"))
         {
-            element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elPaymentSum_WrongInput);
+            element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
+                    .Find(elPaymentBlock.Element.elPaymentSum_WrongInput);
         }
         else if (errorType.equals("WrongInput_Min"))
         {
-            element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elPaymentSum_WrongInput_Min);
+            element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
+                    .Find(elPaymentBlock.Element.elPaymentSum_WrongInput_Min);
         }
 
         return BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);

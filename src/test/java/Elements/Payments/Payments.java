@@ -1,6 +1,7 @@
 package Elements.Payments;
 
 import Base.BrowserChrome;
+import Elements.Payments.KommunalniePlatezhi.KommunalniePlatezhi;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.function.Supplier;
@@ -16,6 +17,5 @@ public class Payments {
     public elWidgetPageBlock _elWidgetPageBlock() {
         return getPage(elWidgetPageBlock::new);
     }
-    public elPaymentsCategoriesHousing _elPaymentsCategoriesHousing() {return getPage(elPaymentsCategoriesHousing::new);}
-    public elPaymentBlock _elPaymentBlock() {return getPage(elPaymentBlock::new);}
+    public KommunalniePlatezhi _KommunalniePlatezhi() {return getPage(KommunalniePlatezhi::new);}
 }

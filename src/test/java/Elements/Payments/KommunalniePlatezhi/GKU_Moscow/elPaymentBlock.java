@@ -1,4 +1,4 @@
-package Elements.Payments;
+package Elements.Payments.KommunalniePlatezhi.GKU_Moscow;
 
 import org.openqa.selenium.By;
 
@@ -16,8 +16,7 @@ public class elPaymentBlock {
         elProviderPayerCode_WrongInput,
         elProviderPeriod_WrongInput,
         elPaymentSum_WrongInput,
-        elPaymentSum_WrongInput_Min,
-        elInput_PaymentService
+        elPaymentSum_WrongInput_Min
     }
 
     public By Find(Element element)
@@ -70,12 +69,6 @@ public class elPaymentBlock {
         {
             return By.xpath(".//*[@data-qa-file='SubscriptionProvider']/div[1]//div[4]/div[1]/form/div[4]//*[@data-qa-file='UIFormRowError' and contains(text(), 'Минимум — 10 \u20BD')]");
         }
-        else if (element == Element.elInput_PaymentService)
-        {
-            return By.xpath("(//*[@data-qa-file='StatelessInput']//*[@data-qa-file='SearchInput'])[1]");
-        }
-
-
 
         return By.xpath("");
     }

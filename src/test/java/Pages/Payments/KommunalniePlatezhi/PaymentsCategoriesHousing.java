@@ -2,7 +2,7 @@ package Pages.Payments.KommunalniePlatezhi;
 
 import Base.BrowserChrome;
 import Elements.Elements_TB;
-import Elements.Payments.elPaymentsCategoriesHousing;
+import Elements.Payments.KommunalniePlatezhi.elPaymentsCategoriesHousing;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 
@@ -14,7 +14,8 @@ public class PaymentsCategoriesHousing {
     {
         System.out.println("Select_BodyRegion");
 
-        By element = Elements_TB._Payments()._elPaymentsCategoriesHousing().Find(elPaymentsCategoriesHousing.Element.elCurrentActualRegion);
+        By element = Elements_TB._Payments()._KommunalniePlatezhi()._elPaymentsCategoriesHousing()
+                .Find(elPaymentsCategoriesHousing.Element.elCurrentActualRegion);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {
@@ -30,7 +31,8 @@ public class PaymentsCategoriesHousing {
     {
         System.out.println("Click_ExpectedRegion");
 
-        By element = Elements_TB._Payments()._elPaymentsCategoriesHousing().Find(elPaymentsCategoriesHousing.Element.elSelectExpectedRegion);
+        By element = Elements_TB._Payments()._KommunalniePlatezhi()._elPaymentsCategoriesHousing()
+                .Find(elPaymentsCategoriesHousing.Element.elSelectExpectedRegion);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {
@@ -46,7 +48,8 @@ public class PaymentsCategoriesHousing {
     {
         System.out.println("Click_FirstPaymentService");
 
-        By element = Elements_TB._Payments()._elPaymentsCategoriesHousing().Find(elPaymentsCategoriesHousing.Element.elFirstPaymentService);
+        By element = Elements_TB._Payments()._KommunalniePlatezhi()._elPaymentsCategoriesHousing()
+                .Find(elPaymentsCategoriesHousing.Element.elFirstPaymentService);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {
@@ -65,9 +68,10 @@ public class PaymentsCategoriesHousing {
         Base.ConfigMain.PaymentExpectedRegion = region;
 
         // Find Current region
-        By element = Elements_TB._Payments()._elPaymentsCategoriesHousing().Find(elPaymentsCategoriesHousing.Element.elCurrentExpectedRegion);
+        By element = Elements_TB._Payments()._KommunalniePlatezhi()._elPaymentsCategoriesHousing()
+                .Find(elPaymentsCategoriesHousing.Element.elCurrentExpectedRegion);
 
-        return BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
+        return BrowserChrome.WaitUntilElementIsDisplayed(element, 10);
     }
 
     public boolean VerifyFirstPaymentService(String expectedPaymentService) {
@@ -77,7 +81,8 @@ public class PaymentsCategoriesHousing {
         Base.ConfigMain.FirstPaymentService = expectedPaymentService;
 
         // Find Current region
-        By element = Elements_TB._Payments()._elPaymentsCategoriesHousing().Find(elPaymentsCategoriesHousing.Element.elVerifyFirstPaymentService);
+        By element = Elements_TB._Payments()._KommunalniePlatezhi()._elPaymentsCategoriesHousing()
+                .Find(elPaymentsCategoriesHousing.Element.elVerifyFirstPaymentService);
 
         return BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
     }
@@ -89,8 +94,9 @@ public class PaymentsCategoriesHousing {
         Base.ConfigMain.FirstPaymentService = paymentService;
 
         // Find Current region
-        By element = Elements_TB._Payments()._elPaymentsCategoriesHousing().Find(elPaymentsCategoriesHousing.Element.elVerifyPaymentService);
+        By element = Elements_TB._Payments()._KommunalniePlatezhi()._elPaymentsCategoriesHousing()
+                .Find(elPaymentsCategoriesHousing.Element.elVerifyPaymentService);
 
-        return BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
+        return BrowserChrome.WaitUntilElementIsDisplayed(element, 10);
     }
 }
