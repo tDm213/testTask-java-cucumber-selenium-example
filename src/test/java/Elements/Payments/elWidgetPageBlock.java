@@ -21,7 +21,7 @@ public class elWidgetPageBlock {
         {
             String txt = "";
 
-            if (FirstPaymentService.equals("GKU_Moscow")) {
+            if (FirstPaymentService.equals("Payments_GKU_Moscow")) {
                 txt = "ЖКУ-Москва";
             }
             return By.xpath("(//*[@data-qa-file='GridColumn'])[1]//*[contains(text(),'"+ txt +"')]");
