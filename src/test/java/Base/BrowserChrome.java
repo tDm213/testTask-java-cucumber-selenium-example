@@ -13,19 +13,6 @@ public class BrowserChrome {
         webDriver.navigate().to(ConfigMain.URLWWW + urlAddition);
     }
 
-//    // Check if element displayed and Visible on Page
-//    public static boolean IsElementVisible(By el)
-//    {
-//        try
-//        {
-//            return webDriver.findElement(el).isDisplayed() && webDriver.findElement(el).isEnabled();
-//        }
-//        catch (NoSuchElementException e)
-//        {
-//            return false;
-//        }
-//    }
-
     // Explicit Wait
     public static boolean WaitUntilElementIsDisplayed(By element, int timeoutInSeconds)
     {

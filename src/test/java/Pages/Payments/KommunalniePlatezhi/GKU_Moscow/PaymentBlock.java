@@ -46,7 +46,7 @@ public class PaymentBlock {
 
     public void Input_ProviderPayerCode (String input)
     {
-        System.out.println("Input_ProviderPayerCode");
+        System.out.println("Input_ProviderPayerCode: " + input);
 
         By element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
                 .Find(elPaymentBlock.Element.elInput_ProviderPayerCode);
@@ -59,13 +59,13 @@ public class PaymentBlock {
                 BrowserChrome.webDriver.findElement(element).sendKeys(input);
             }
         } catch (NoSuchElementException e) {
-            System.out.println("Can't find: Input_ProviderPayerCode");
+            System.out.println("Can't find: Input_ProviderPayerCode: " + input);
         }
     }
 
     public void Input_ProviderPeriod (String input)
     {
-        System.out.println("Input_ProviderPeriod");
+        System.out.println("Input_ProviderPeriod: " + input);
 
         By element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
                 .Find(elPaymentBlock.Element.elInput_ProviderPeriod);
@@ -78,12 +78,12 @@ public class PaymentBlock {
                 BrowserChrome.webDriver.findElement(element).sendKeys(input);
             }
         } catch (NoSuchElementException e) {
-            System.out.println("Can't find: Input_ProviderPeriod");
+            System.out.println("Can't find: Input_ProviderPeriod: " + input);
         }
     }
     public void Input_PaymentSum (String input)
     {
-        System.out.println("Input_PaymentSum");
+        System.out.println("Input_PaymentSum: " + input);
 
         By element = Elements_TB._Payments()._KommunalniePlatezhi()._GKU_Moscow()._elPaymentBlock()
                 .Find(elPaymentBlock.Element.elInput_PaymentSum);
@@ -96,7 +96,7 @@ public class PaymentBlock {
                 BrowserChrome.webDriver.findElement(element).sendKeys(input);
             }
         } catch (NoSuchElementException e) {
-            System.out.println("Can't find: Input_PaymentSum");
+            System.out.println("Can't find: Input_PaymentSum: " + input);
         }
     }
 

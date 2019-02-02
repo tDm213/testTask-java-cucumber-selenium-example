@@ -1,9 +1,8 @@
 @PaymentsValidation_GKU_Moscow
 
-Feature: Payments validation for zhku-moskva
+Feature: Payments validation for GKU-Moscow
 
-  Scenario Outline: Check zhku-moskva in Moskov are and stPetersburg areas
-
+  Scenario Outline: Check GKU-Moscow in Moscow and stPetersburg areas
     ### Step 1 ###
     Given HomePage, I go to the Home Page
     ### Step 2 ###

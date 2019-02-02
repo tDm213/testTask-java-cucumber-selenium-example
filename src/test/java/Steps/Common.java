@@ -10,7 +10,8 @@ public class Common {
         BrowserChrome.WaitSeconds(3);
 
         String actualURL = BrowserChrome.webDriver.getCurrentUrl();
-        System.out.println("actualURL: " + actualURL);
+        System.out.println("verifyExpectedURL Actual: " + actualURL);
+        System.out.println("verifyExpectedURL ExpectedURL: " + ExpectedURL);
         Assert.assertEquals(ExpectedURL, actualURL);
     }
 }
