@@ -25,6 +25,6 @@ mvn clean install -DfailIfNoTests=false -Dtest=PaymentsValidation_GKU_Moscow_AT
 2.1) Add in goals:
 clean install -DfailIfNoTests=false -Dtest=PaymentsValidation_GKU_Moscow_AT
 
-2.2) Add in POM path to project
+2.2) Add in POM path to project pom.xml
 
 Example: C:\Software\TestProjects\pom.xml
