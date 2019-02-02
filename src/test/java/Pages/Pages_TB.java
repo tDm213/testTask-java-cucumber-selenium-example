@@ -18,7 +18,5 @@ public class Pages_TB {
     public static HomePage _HomePage() {
         return getPage(HomePage::new);
     }
-    public static Payments _Payments() {
-        return getPage(Payments::new);
-    }
+    public static Payments _Payments() { return getPage(Payments::new); }
 }

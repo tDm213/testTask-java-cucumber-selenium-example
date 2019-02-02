@@ -2,20 +2,22 @@ package Pages.Payments;
 
 import Base.BrowserChrome;
 import Elements.Elements_TB;
+import Elements.Payments.elPaymentBlock;
 import Elements.Payments.elWidgetPageBlock;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 
+import static Base.ConfigMain.FirstPaymentService;
 import static Base.ConfigMain.PAGE_LOAD_TIMEOUT;
 
 public class WidgetPageBlock {
 
-    // Click payments from footer
+    // Click payments GKH
     public void Click_KommunalniePlatezhi ()
     {
-        System.out.println("Footer, Click_KommunalniePlatezhi");
+        System.out.println("Click_KommunalniePlatezhi");
 
-        By element = Elements_TB._Payments()._elWidgetPageBlock().Find(elWidgetPageBlock.Element.elHousing);
+        By element = Elements_TB._Payments()._elWidgetPageBlock().Find(elWidgetPageBlock.Element.elKommunalniePlatezhi);
         BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
 
         try {
@@ -23,7 +25,7 @@ public class WidgetPageBlock {
                 BrowserChrome.webDriver.findElement(element).click();
             }
         } catch (NoSuchElementException e) {
-            System.out.println("Can't find: Footer, Click_KommunalniePlatezhi");
+            System.out.println("Can't find: Click_KommunalniePlatezhi");
         }
     }
 
@@ -49,6 +51,29 @@ public class WidgetPageBlock {
             }
         } catch (NoSuchElementException e) {
             System.out.println("Can't find: Click_FirstPaymentService");
+        }
+    }
+
+    public void Input_Saved_PaymentService ()
+    {
+        System.out.println("Input_Saved_PaymentService");
+        String txt = "";
+
+        if (FirstPaymentService.equals("GKU_Moscow")) {
+            txt = "ЖКУ-Москва";
+        }
+
+        By element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elInput_PaymentService);
+        BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
+
+        try {
+            if (BrowserChrome.ElementIsDisplayed(element)) {
+                BrowserChrome.webDriver.findElement(element).click();
+                BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
+                BrowserChrome.webDriver.findElement(element).sendKeys(txt);
+            }
+        } catch (NoSuchElementException e) {
+            System.out.println("Can't find: Input_Saved_PaymentService");
         }
     }
 }

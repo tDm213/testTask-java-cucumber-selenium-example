@@ -1,18 +1,16 @@
-package Pages.Payments;
+package Pages.Payments.KommunalniePlatezhi.GKU_Moscow;
 
 import Base.BrowserChrome;
-import Pages.Payments.KommunalniePlatezhi.KommunalniePlatezhi;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.function.Supplier;
 
-public class Payments {
+public class GKU_Moscow {
     private static <T> T getPage(Supplier<? extends T> supp) {
         T page = supp.get();
         PageFactory.initElements(BrowserChrome.webDriver, page);
         return page;
     }
 
-    public WidgetPageBlock _WidgetPageBlock() {return getPage(WidgetPageBlock::new);}
-    public KommunalniePlatezhi _KommunalniePlatezhi() {return getPage(KommunalniePlatezhi::new);}
+    public PaymentBlock _PaymentBlock() {return getPage(PaymentBlock::new);}
 }

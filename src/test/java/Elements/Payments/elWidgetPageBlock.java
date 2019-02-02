@@ -7,13 +7,13 @@ import static Base.ConfigMain.FirstPaymentService;
 public class elWidgetPageBlock {
     public enum Element
     {
-        elHousing,
+        elKommunalniePlatezhi,
         elFirstService
     }
 
     public By Find(Element element)
     {
-        if (element == Element.elHousing)
+        if (element == Element.elKommunalniePlatezhi)
         {
             return By.xpath("(.//*[@data-qa-file='PaymentsCategories']//*[@data-qa-file='Housing'])[2]");
         }

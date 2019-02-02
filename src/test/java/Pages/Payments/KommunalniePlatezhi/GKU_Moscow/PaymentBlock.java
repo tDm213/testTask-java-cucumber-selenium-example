@@ -1,4 +1,4 @@
-package Pages.Payments;
+package Pages.Payments.KommunalniePlatezhi.GKU_Moscow;
 
 import Base.BrowserChrome;
 import Elements.Elements_TB;
@@ -6,7 +6,6 @@ import Elements.Payments.elPaymentBlock;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 
-import static Base.ConfigMain.FirstPaymentService;
 import static Base.ConfigMain.PAGE_LOAD_TIMEOUT;
 
 public class PaymentBlock {
@@ -61,7 +60,6 @@ public class PaymentBlock {
         }
     }
 
-
     public void Input_ProviderPeriod (String input)
     {
         System.out.println("Input_ProviderPeriod");
@@ -77,29 +75,6 @@ public class PaymentBlock {
             }
         } catch (NoSuchElementException e) {
             System.out.println("Can't find: Input_ProviderPeriod");
-        }
-    }
-
-    public void Input_Saved_PaymentService ()
-    {
-        System.out.println("Input_Saved_PaymentService");
-        String txt = "";
-
-        if (FirstPaymentService.equals("GKU_Moscow")) {
-            txt = "ЖКУ-Москва";
-        }
-
-        By element = Elements_TB._Payments()._elPaymentBlock().Find(elPaymentBlock.Element.elInput_PaymentService);
-        BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
-
-        try {
-            if (BrowserChrome.ElementIsDisplayed(element)) {
-                BrowserChrome.webDriver.findElement(element).click();
-                BrowserChrome.WaitUntilElementIsDisplayed(element, PAGE_LOAD_TIMEOUT);
-                BrowserChrome.webDriver.findElement(element).sendKeys(txt);
-            }
-        } catch (NoSuchElementException e) {
-            System.out.println("Can't find: Input_Saved_PaymentService");
         }
     }
     public void Input_PaymentSum (String input)

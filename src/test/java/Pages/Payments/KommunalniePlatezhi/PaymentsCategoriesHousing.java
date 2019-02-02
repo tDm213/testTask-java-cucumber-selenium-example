@@ -1,4 +1,4 @@
-package Pages.Payments;
+package Pages.Payments.KommunalniePlatezhi;
 
 import Base.BrowserChrome;
 import Elements.Elements_TB;

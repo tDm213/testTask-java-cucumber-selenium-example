@@ -11,7 +11,7 @@ public class Payments {
     }
     @And("^Payments, Search field for PaymentServices$")
     public void paymentsSearchFieldForPaymentServices() {
-        Pages_TB._Payments()._PaymentBlock().Input_Saved_PaymentService();
+        Pages_TB._Payments()._WidgetPageBlock().Input_Saved_PaymentService();
     }
     @And("^Payments, Search field, Verify ([^\"]*) is first one$")
     public void paymentsSearchFieldVerifyPaymentServicesIsFirstOne(String service) {
